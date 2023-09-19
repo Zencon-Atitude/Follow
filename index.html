@@ -1104,25 +1104,41 @@
 			width: 600,
 			});
 
-			var candleSeries = chart.addCandlestickSeries();
+			//var candleSeries = chart.addCandlestickSeries();
 
 			// Função para adicionar uma vela e agendar a próxima
 			function addCandle(index) {
-			if (index < data.length) {
-				candleSeries.update({
-				time: data[index].time,
-				open: data[index].open,
-				high: data[index].high,
-				low: data[index].low,
-				close: data[index].close,
-				});
+				if (index < data.length) {
+					const currentCandle = data[index];
+					const previousCandle = index > 0 ? data[index - 1] : null;
+					
+					if (previousCandle && previousCandle.open > currentCandle.open) {
+					// Se o open anterior for maior que o atual, pinte o candle de laranja
+					candleSeries.update({
+						time: currentCandle.time,
+						open: currentCandle.open,
+						high: currentCandle.high,
+						low: currentCandle.low,
+						close: currentCandle.close,
+						color: 'orange', // Defina a cor como laranja
+					});
+					} else {
+					// Caso contrário, use outra cor ou deixe a cor padrão
+					candleSeries.update({
+						time: currentCandle.time,
+						open: currentCandle.open,
+						high: currentCandle.high,
+						low: currentCandle.low, // Corrigido aqui de currentCandle.lo para currentCandle.low
+						close: currentCandle.close,
+					});
+					}
 
-				// Agendar a próxima vela após 1 segundo
-				setTimeout(function () {
-				addCandle(index + 1);
-				}, 1000); // 1000 milissegundos = 1 segundo
+					// Agendar a próxima vela após 1 segundo
+					setTimeout(function () {
+					addCandle(index + 1);
+					}, 1000); // 1000 milissegundos = 1 segundo
 				}
-			}
+				}
 
 			//setting currency
 			// Get the current users primary locale
@@ -1170,6 +1186,10 @@
 				},
 			});
 			
+			var candleSeries = chart.addCandlestickSeries();
+
+			
+
 
 			// Comece a adicionar velas a partir do primeiro dados
 			addCandle(0);
