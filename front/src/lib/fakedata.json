@@ -1,0 +1,46 @@
+{
+	"assets": [
+		{
+			"id" : 0,
+			"name" : "Mina Sul",
+			"value" : 23,
+			"description" : "Café em Mina Sul é plantado e colhido por IA!",
+			"imgUrl": "/images/temp_assets/image5.svg"
+		},
+		{
+			"id" : 1,
+			"name" : "Lote A",
+			"value" : -111,
+			"description" : "Description demo.",
+			"imgUrl": "/images/temp_assets/image5.svg"
+		},
+		{
+			"id" : 2,
+			"name" : "Green Fields",
+			"value" : 2,
+			"description" : "Description demo",
+			"imgUrl": "/images/temp_assets/image5.svg"
+		},
+		{
+			"id" : 3,
+			"name" : "Another Place",
+			"value" : 99999,
+			"description" : "Description demo.",
+			"imgUrl": "/images/temp_assets/image5.svg"
+		},
+		{
+			"id" : 4,
+			"name" : "Another Place",
+			"value" : 99999,
+			"description" : "Description demo.",
+			"imgUrl": "/images/temp_assets/image5.svg"
+		},
+		{
+			"id" : 5,
+			"name" : "Another Place",
+			"value" : 99999,
+			"description" : "Description demo.",
+			"imgUrl": "/images/temp_assets/image5.svg"
+		}
+	]
+}

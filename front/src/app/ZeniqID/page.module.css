@@ -1,0 +1,32 @@
+.mainContainer {
+    background: none !important;
+    background-color: var(--color-2) !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkStyle1 {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+}
+
+.linkStyle2 {
+    color: #0E4428;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+}
+
+.message {
+    margin-top: 10px;
+    text-align: center;
+}

@@ -1,0 +1,67 @@
+.assetCard {
+	height: 154px;
+	max-height: 154px;
+	margin: 14px 0px;
+}
+
+.assetCardInfo {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 97px;
+	width: 100%;
+}
+
+.assetCardInfoDesc {
+	display: flex;
+	align-items: center;
+	height: 57px;
+	width: 100%;
+	color: var(--color-1);
+	padding: 0px 10px;
+	background-color: #d9d9d9;
+}
+
+.assetCardInfoDesc p {
+	margin-left: 4px;
+	font-weight: 600;
+}
+
+.assetCardInfo h3 {
+	color: var(--color-2);
+	margin-left: 8px;
+	font-weight: 600;
+	text-align: center;
+	line-height: 23.7px;
+}
+
+.assetTokensText {
+	font-size: 1.25rem
+}
+
+.buttonspecs {
+	position: absolute;
+	right: 10px;
+	z-index: 20;
+	width: 66px;
+	height: 17px;
+	font-size: 10px;
+	font-weight: 600;
+}
+
+.assetImage {
+	margin-left: auto;
+	object-fit: cover;
+}
+
+.assetCardInfoLeft {
+	position: absolute;
+	display: flex;
+	height: 100%;
+	align-items: center;
+	z-index: 10;
+	width: 40%;
+	padding: 0 10px;
+	background: linear-gradient(to right, rgba(14, 68, 40, 0.9) 0%, rgba(14, 68, 40, 0.15) 100%);
+}

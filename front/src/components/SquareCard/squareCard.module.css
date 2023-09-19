@@ -1,0 +1,59 @@
+.varMode1 {
+    --card-width: 134px;
+    --card-height: 129px;
+    --border-radius: 20px;
+    --card-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    --detail-height: 96px;
+    --detail-border: 20px 20px 0 0;
+    --detail-bg: linear-gradient(182deg, rgba(255, 255, 255, 0.80) 64.44%, rgba(255, 255, 255, 0.00) 98.23%);
+    --detail-top: 0;
+    --desc-color: #0E4428;
+    --desc-fs: 12px;
+    --desc-weight: 600;
+}
+
+.varMode2 {
+    --card-width: 103px;
+    --card-height: 77px;
+    --border-radius: 8px;
+    --card-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.0));
+    --detail-height: 11px;
+    --detail-border: 0;
+    --detail-bg: #D9D9D9;
+    --detail-top: 53px;
+    --desc-color: #000;
+    --desc-fs: 8px;
+    --desc-weight: 400;
+}
+
+.container {
+    min-width: var(--card-width);
+    max-width: var(--card-width);
+    min-height: var(--card-height);
+    max-height: var(--card-height);    
+    border: 0;
+    border-radius: var(--border-radius);
+    background-color: #D9D9D9;
+    filter: var(--card-filter); 
+    overflow: hidden;
+}
+
+.cardDetail {
+    width: 100%;
+    height: var(--detail-height);
+    border-radius: var(--detail-border);
+    background: var(--detail-bg);
+    position: absolute;
+    top: var(--detail-top);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+    color: var(--desc-color);
+    text-align: center;
+    font-size: var(--desc-fs);
+    font-weight: var(--desc-weight);
+}

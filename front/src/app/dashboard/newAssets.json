@@ -1,0 +1,60 @@
+{
+    "newAssets": [
+        {
+            "id": "01",
+            "title": "Arena sul - Minas Gerais",
+            "card": {
+                "src": "/images/tmp/cards/image1.png",
+                "alt": "image-1"
+            }
+        },
+        {
+            "id": "02",
+            "title": "Arena Leste - Amazonas",
+            "card": {
+                "src": "/images/tmp/cards/image2.png",
+                "alt": "image-2"
+            }
+        },
+        {
+            "id": "03",
+            "title": "Arena sul - Minas Gerais",
+            "card": {
+                "src": "/images/tmp/cards/image3.png",
+                "alt": "image-3"
+            }
+        },
+        {
+            "id": "04",
+            "title": "Arena Leste - Amazonas",
+            "card": {
+                "src": "/images/tmp/cards/image4.png",
+                "alt": "image-4"
+            }
+        },
+        {
+            "id": "05",
+            "title": "Arena sul - Minas Gerais",
+            "card": {
+                "src": "/images/tmp/cards/image5.png",
+                "alt": "image-5"
+            }
+        },
+        {
+            "id": "06",
+            "title": "Arena Leste - Amazonas",
+            "card": {
+                "src": "/images/tmp/cards/image6.png",
+                "alt": "image-6"
+            }
+        },
+        {
+            "id": "07",
+            "title": "Arena sul - Minas Gerais",
+            "card": {
+                "src": "/images/tmp/cards/image7.png",
+                "alt": "image-7"
+            }
+        }
+    ]
+}
