@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.9.3",
+    "axios": "^1.5.0",
     "nft.storage": "^7.1.1"
   }
 }

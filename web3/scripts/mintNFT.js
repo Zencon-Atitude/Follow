@@ -1,7 +1,7 @@
 const { ethers } = require('hardhat');
 
-const contractAddress = process.env.CONTRACT_ADDRESS
-const metadataURL = process.env.IPFS_URI
+const contractAddress = "0x14C23065A83D65F82f89894354fe01fEaa667fB4" //process.env.CONTRACT_ADDRESS
+const metadataURL = "bafkreihhqghujo6xahi2tziwf4ozihi2vo3guw6z7rjteqwxopyk3cal54" //process.env.IPFS_URI
 
 async function mintNFT(contractAddress, metadataURL) {
     const NFT = await ethers.getContractFactory("strategyNFT")
