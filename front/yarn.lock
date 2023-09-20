@@ -1266,6 +1266,11 @@
   dependencies:
     tslib "^2.4.0"
 
+"@types/colorbrewer@^1.0.30":
+  version "1.0.30"
+  resolved "https://registry.yarnpkg.com/@types/colorbrewer/-/colorbrewer-1.0.30.tgz#a4dcce1120175aad1a9d427366d698fa58bd627e"
+  integrity sha512-3insLunEvR/VqsruFp3/magrrhDkUpSgTJo5I5e3j/qomtT13lw7C7t0VY8G8hMFWMD2qI6vmS+QS6tZwVExNg==
+
 "@types/cookie@^0.4.1":
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/@types/cookie/-/cookie-0.4.1.tgz#bfd02c1f2224567676c1545199f87c3a861d878d"
@@ -1729,6 +1734,11 @@ color-name@~1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
+
+colorbrewer@^1.5.3:
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/colorbrewer/-/colorbrewer-1.5.3.tgz#f4c66d16bdf26c84a2bc893b988dea7e90197828"
+  integrity sha512-ee4k+3P0rzHtikVcmBsO0N81J2JBjE93S9BM21WwdHS30oZe6Okp0VDJViS9y5aUL8kedEXzL7Yfi9WzO5ghYQ==
 
 combined-stream@^1.0.8:
   version "1.0.8"

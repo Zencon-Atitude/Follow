@@ -1,5 +1,5 @@
 {
-  "name": "follow-front",
+  "name": "origina-front",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,6 +14,7 @@
     "@types/shpjs": "^3.4.2",
     "axios": "^1.4.0",
     "bufferutil": "^4.0.7",
+    "colorbrewer": "^1.5.3",
     "cookies-next": "^2.1.2",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
@@ -35,6 +36,7 @@
     "utf-8-validate": "^6.0.3"
   },
   "devDependencies": {
+    "@types/colorbrewer": "^1.0.30",
     "@types/leaflet": "^1.9.4",
     "@types/node": "20.6.0",
     "@types/react": "18.2.21",

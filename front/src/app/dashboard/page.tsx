@@ -3,37 +3,16 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
-import utilStyles from "@/styles/utils.module.css";
 import Layout from "@/components/layout/layout";
-import { Jost, Rubik } from "next/font/google";
-import SquareCard from "@/components/SquareCard/squareCard";
-import { getNewsData } from "@/lib/newsData";
-import { getNewsAssetsData } from "@/lib/newAssetsData";
 import { useNomoState } from "@/hooks/custom_hooks";
-import { nomo, nomoGetWalletAddresses } from "nomo-plugin-kit/dist/nomo_api";
-import NEWS_LIST from "./news.json";
-import NEWS_LIST_ASSETS from "./newAssets.json";
+import { nomo } from "nomo-plugin-kit/dist/nomo_api";
 import { useAuth } from "@/hooks/useAuth";
-
-const jost = Jost({
-  weight: "600",
-  subsets: ["latin"],
-});
-
-const rubik = Rubik({
-  subsets: ["latin"],
-});
 
 export default function Welcome() {
   const [platformInfo, _] = useNomoState(nomo.getPlatformInfo);
   const [walletAddresses, isLoading] = useNomoState(nomo.getWalletAddresses);
   const [userEth, setUserEth] = useState<string | undefined>("");
-  const [newsList, setNewsList] = useState(NEWS_LIST.news);
   const { user } = useAuth();
-
-  useEffect(() => {
-    console.log(isLoading)
-  }, [isLoading])
 
   const props: object = {
     propTopBar: {
@@ -65,83 +44,121 @@ export default function Welcome() {
       setUserEth(walletAddresses.walletAddresses["ETH"].slice(0, 6) + "...");
     }
   }, [walletAddresses, platformInfo, user]);
+
   return (
     <Layout {...props}>
-      <section className={`${styles.container} ${styles.profileContainer}`}>
-        <div className={utilStyles.iconedTitle}>
-          <h3 className={`${utilStyles.title}`} style={rubik.style}>
-            Welcome!!
-          </h3>
-        </div>
-        <p
-          className={rubik.className}
-          style={{ fontSize: "1.3rem", fontWeight: 400 }}
-        >
-          Hello, {userEth}
-        </p>
-      </section>
-
-      <section className={styles.menu}>
-        <div className={styles.menuItem}>
-          <div className={styles.menuItemIcon}>
+      <div className={styles.topper}>
+        <Image
+          alt="logo-text"
+          src="/profile.png"
+          width={50}
+          height={51}
+          style={{
+            opacity: 0.8,
+          }}
+          className={styles.logoMargin}
+        />
+        <p className={styles.topperText}>Hello, {userEth}</p>
+      </div>
+      <div className={styles.divider}>
+        <div className={styles.dividerBorder}></div>
+        <div className={styles.dividerLine}></div>
+      </div>
+      <div className={styles.buttonArea}>
+        <Link href="/dashboard/education" className={styles.buttonContainer}>
+          <div className={styles.button}>
             <Image
-              alt="news-icon"
-              src="/images/icons/farmer.png"
-              width={50}
-              height={50}
+              alt="logo-text"
+              src="/books.png"
+              width={40}
+              height={40}
+              style={{
+                opacity: 0.5,
+                filter: "invert(1)",
+              }}
+              className={styles.logoMargin}
+            />
+            </div>
+            <p
+              style={{
+                marginRight: 10,
+                color: "white",
+              }}
+            >
+              Education
+            </p>
+        </Link>
+        <Link href="/dashboard/operational" className={styles.buttonContainer}>
+          <div className={styles.button}>
+            <Image
+              alt="logo-text"
+              src="/graphic.png"
+              width={40}
+              height={40}
+              style={{
+                opacity: 0.5,
+                filter: "invert(1)",
+              }}
+              className={styles.logoMargin}
             />
           </div>
-          <h1 style={jost.style} className={styles.menuItemText}>
-            COOPERATIVE
-          </h1>
-        </div>
-        <div className={styles.menuItem}>
-          <div className={styles.menuItemIcon}>
+          <p
+            style={{
+              marginRight: 10,
+              color: "white",
+            }}
+          >
+            Operational
+          </p>
+        </Link>
+        <Link href="/dashboard/marketplace" className={styles.buttonContainer}>
+          <div className={styles.button}>
             <Image
-              alt="news-icon"
-              src="/images/icons/places.png"
-              width={50}
-              height={50}
+              alt="logo-text"
+              src="/card.png"
+              width={40}
+              height={40}
+              style={{
+                opacity: 0.5,
+                filter: "invert(1)",
+              }}
+              className={styles.logoMargin}
             />
           </div>
-          <h1 style={jost.style} className={styles.menuItemText}>
-            MARKETPLACE
-          </h1>
-        </div>
-        <div className={styles.menuItem}>
-          <div className={styles.menuItemIcon}>
+          <p
+            style={{
+              marginRight: 10,
+              color: "white",
+            }}
+          >
+            Marketplace
+          </p>
+        </Link>
+        <Link href="/dashboard/community" className={styles.buttonContainer}>
+          <div className={styles.button}>
             <Image
-              alt="news-icon"
-              src="/images/icons/map.png"
-              width={50}
-              height={50}
+              alt="logo-text"
+              src="/persons.png"
+              width={40}
+              height={40}
+              style={{
+                opacity: 0.5,
+                filter: "invert(1)",
+                marginRight: 5,
+              }}
+              className={styles.logoMargin}
             />
           </div>
-          <h1 style={jost.style} className={styles.menuItemText}>
-            NEW AREAS
-          </h1>
-        </div>
-      </section>
-
-      <section className={`${styles.container} ${styles.sectionContainer}`}>
-        <div className={styles.sectionHead}>
-          <div className={utilStyles.iconedTitle} id="origami">
-            <Image
-              alt="news-icon"
-              src="/images/icons/newsIcon.svg"
-              width={24}
-              height={19}
-            />
-            <h2 className={`${jost.className} ${utilStyles.title}`}>News</h2>
-          </div>
-          <Link href="/dashboard/news">more</Link>
-        </div>
-        <div className={styles.cardList}>
-          {newsList.map((card, idx) => {
-            return <SquareCard {...card} key={idx} />;
-          })}
-        </div>
-      </section>
+          <p
+            style={{
+              marginRight: 10,
+              color: "white",
+            }}
+          >
+            Community
+          </p>
+        </Link>
+      </div>
     </Layout>
   );
 }

@@ -1,3 +1,6 @@
+@import '~leaflet/dist/leaflet.css';
+
+
 /* @media (prefers-color-scheme: dark) {
 	html {
 		color-scheme: dark;
@@ -22,3 +25,9 @@ body {
 	background-color: gray;
 }
 
+
+
+.leaflet-container{
+	width: 100%;
+	height: 100%;
+  }

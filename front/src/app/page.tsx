@@ -24,31 +24,33 @@ export default function Home() {
       mode: 0,
       className: "",
     },
-    isLoading
+    isLoading,
   };
 
   return (
     <Layout {...props}>
       <Image
         alt="logo-text"
-        src="/images/logoText.png"
+        src="/logo.png"
         width={266}
         height={51}
         className={styles.logoMargin}
       />
-      <Link
-        href={
-          platformInfo !== null && platformInfo.appName === "Not in Nomo app!"
-            ? "/ZeniqID"
-            : "/dashboard"
-        }
-      >
-        <button
-          className={`${styles.buttonContainer} ${styles.loginButtonContent}`}
+      <div className={styles.buttonArea}>
+        <Link
+          href={
+            platformInfo !== null && platformInfo.appName === "Not in Nomo app!"
+              ? "/ZeniqID"
+              : "/dashboard"
+          }
         >
-          LOG IN
-        </button>
-      </Link>
+          <button
+            className={`${styles.buttonContainer} ${styles.loginButtonContent}`}
+          >
+            LOGIN
+          </button>
+        </Link>
+      </div>
     </Layout>
   );
 }

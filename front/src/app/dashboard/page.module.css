@@ -1,98 +1,68 @@
-.mainContainer {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  padding-top: 0 !important;
+.topper {
+  width: 100%;
+  height: 140px;
   display: flex;
   flex-direction: column;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
+  justify-content: right;
+  align-items: flex-end;
+  padding: 2rem;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 20px 0;
+.topperText {
+  color: white;
+  width: 48px;
+  text-align: center;
+  margin-top: 10px;
 }
 
-.profileContainer {
-  margin: 20px;
-}
-
-.profileContainer h2 {
-  font-weight: 400;
-}
-
-.sectionContainer div[id="origami"] {
-  margin-left: 14px;
-}
-
-.sectionHead {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.sectionHead a {
-  margin-right: 14px;
-  text-decoration: none;
-  color: #1a5e39;
-}
-
-.cardList {
+.divider {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
-  align-items: center;
+  justify-content: flex-end;
 }
 
-.cardList [id="SquareCard"] {
-  margin: 12px;
-}
+.dividerLine {
+  width: 80%;
 
-.menu {
-  width: 100%;
-  height: 150px;
-  border-radius: 30px;
-  background-color: white;
+  height: 5px;
+  background: #044040;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 10px;
 }
 
-.menuItem {
+.dividerBorder {
+  width: 10px;
+  border-radius: 50%;
+  height: 10px;
+  background: #044040;
   display: flex;
-  justify-content: center;
+  margin-top: 7px;
+  margin-right: -3px;
+}
+
+.buttonContainer {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  width: 150px;
-  height: 150px;
-  padding: 1rem;
+  margin-top: 10px;
   text-decoration: none;
-  color: #1a5e39;
-  margin-right: 1rem;
 }
 
-.menuItem:last-child {
-  margin-right: 0;
+.buttonArea {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
-.menuItemIcon {
-  background-color: #d9d9d9;
+.button {
   width: 80px;
   height: 80px;
-  padding: 0.5rem;
+  border-radius: 50%;
+  background: #044040;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
-  margin-bottom: 1rem;
-}
-
-.menuItemText {
-  font-weight: 600;
-  text-align: center;
+  margin-right: 10px;
 }

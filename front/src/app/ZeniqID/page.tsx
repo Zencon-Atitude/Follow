@@ -8,6 +8,7 @@ import { useNomoState } from "../../hooks/custom_hooks";
 import { nomo } from "nomo-plugin-kit/dist/nomo_api";
 import { getCurrentNomoTheme } from "nomo-plugin-kit/dist/nomo_theming";
 import { useEffect } from "react";
+import Image from "next/image";
 
 export default function ZeniqID() {
   const { qr, message, user } = useAuth();
@@ -32,13 +33,24 @@ export default function ZeniqID() {
 
   return (
     <Layout {...props}>
-      <QRCode
-        size={256}
-        style={{ height: "auto", maxWidth: "80%", width: "80%" }}
-        value={qr || ""}
-        onClick={() => window.open(qr || "")}
-        viewBox={`0 0 256 256`}
-      />
+      <div className={styles.top}>
+        <Image
+          alt="logo-text"
+          src="/logo.png"
+          width={100}
+          height={51}
+          className={styles.logoMargin}
+        />
+      </div>
+      <div className={styles.main}>
+        <QRCode
+          size={256}
+          style={{ height: "auto", maxWidth: "80%", width: "80%" }}
+          value={qr || ""}
+          onClick={() => window.open(qr || "")}
+          viewBox={`0 0 256 256`}
+        />
+      </div>
     </Layout>
   );
 }

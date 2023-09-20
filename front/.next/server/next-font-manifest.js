@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/gabriel/Desktop/Projetos/Follow/front-end/src/app/layout\":[\"static/media/7af297af88ee7af1-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"

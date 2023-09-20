@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Projeto ORIGINA TOKEN
 
-## Getting Started
+Este é um projeto Origina Token
 
-First, run the development server:
+## Inicialização do Projeto
+
+Para iniciar o projeto, siga estas etapas:
+
+1. Clone este repositório para o seu computador:
 
 ```bash
+git clone https://github.com/ycr4zy/origina-token.git
+cd origina-token
+npm install
+# ou
+yarn install
 npm run dev
-# or
+# ou
 yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Execução Local ou Remoto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Now you need put ORIGINA TOKEN project running remotely using https://origina.gneves.dev to work with a plugin nomo manifest.
+or with local connection with http://127.0.0.1:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+## MacOS Cloudflared Tunneling
+brew install cloudflare/cloudflare/cloudflared &&
+sudo cloudflared service install eyJhIjoiNDhhZDdlNTdhOGQ0M2MzMzI3NjNkMWQxMDU2YjM4NmIiLCJ0IjoiMjc5ZmNiODYtN2M1NC00YzFjLThkNjUtZmEwYzdkNDY2OGNiIiwicyI6IlkyUTNOamhpT0RjdE1XVXhZUzAwWXpkbUxXRTVZV1l0TVdRMFpEZG1aakV4TW1KaCJ9
 
-## Learn More
+## Red Hat Cloudflared Tunneling
+curl -L --output cloudflared.rpm https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-x86_64.rpm &&
 
-To learn more about Next.js, take a look at the following resources:
+sudo yum localinstall -y cloudflared.rpm &&
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+sudo cloudflared service install eyJhIjoiNDhhZDdlNTdhOGQ0M2MzMzI3NjNkMWQxMDU2YjM4NmIiLCJ0IjoiMjc5ZmNiODYtN2M1NC00YzFjLThkNjUtZmEwYzdkNDY2OGNiIiwicyI6IlkyUTNOamhpT0RjdE1XVXhZUzAwWXpkbUxXRTVZV1l0TVdRMFpEZG1aakV4TW1KaCJ9
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Windows Cloudflared Tunneling
+Download https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.msi.
 
-## Deploy on Vercel
+Run the installer.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open Command Prompt as Administrator.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Run the following command:
+
+cloudflared.exe service install eyJhIjoiNDhhZDdlNTdhOGQ0M2MzMzI3NjNkMWQxMDU2YjM4NmIiLCJ0IjoiMjc5ZmNiODYtN2M1NC00YzFjLThkNjUtZmEwYzdkNDY2OGNiIiwicyI6IlkyUTNOamhpT0RjdE1XVXhZUzAwWXpkbUxXRTVZV1l0TVdRMFpEZG1aakV4TW1KaCJ9
+
+## Debian Cloudflared Tunneling
+curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb &&
+
+sudo dpkg -i cloudflared.deb &&
+
+sudo cloudflared service install eyJhIjoiNDhhZDdlNTdhOGQ0M2MzMzI3NjNkMWQxMDU2YjM4NmIiLCJ0IjoiMjc5ZmNiODYtN2M1NC00YzFjLThkNjUtZmEwYzdkNDY2OGNiIiwicyI6IlkyUTNOamhpT0RjdE1XVXhZUzAwWXpkbUxXRTVZV1l0TVdRMFpEZG1aakV4TW1KaCJ9
+```
