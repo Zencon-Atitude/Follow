@@ -62,3 +62,5 @@ Looking ahead, Follow the Lead has ambitious plans for the future:
 ## *Conclusion*
 
 Join us at Follow the Lead, your investment partner for all experience levels. Together, we can simplify investments, educate traders, and create a thriving community that empowers everyone to succeed in the financial markets. Thank you for considering our platform, and we look forward to your support!
+
+Presentation Link: https://www.canva.com/design/DAFuts_4yLI/6RdcuXrSMqxBQhLIyIFwTw/edit?utm_content=DAFuts_4yLI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
