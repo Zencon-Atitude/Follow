@@ -1,5 +1,7 @@
 # *Follow the Lead - Simplifying Investments for All*
 
+## *Presentation Link:* https://www.canva.com/design/DAFuts_4yLI/6RdcuXrSMqxBQhLIyIFwTw/edit?utm_content=DAFuts_4yLI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 ## *Introduction*
 
 Welcome to Follow the Lead, an innovative platform designed to simplify investments for individuals of all experience levels. In this document, we will provide an overview of our business, the technologies we use, the impacts we aim to create, our monetization strategy, competitors, and our vision for the platform's future.
@@ -63,4 +65,3 @@ Looking ahead, Follow the Lead has ambitious plans for the future:
 
 Join us at Follow the Lead, your investment partner for all experience levels. Together, we can simplify investments, educate traders, and create a thriving community that empowers everyone to succeed in the financial markets. Thank you for considering our platform, and we look forward to your support!
 
-Presentation Link: https://www.canva.com/design/DAFuts_4yLI/6RdcuXrSMqxBQhLIyIFwTw/edit?utm_content=DAFuts_4yLI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
