@@ -16,7 +16,7 @@ error SubscriptionNotRenewable();
 error InvalidTokenId();
 error CallerNotOwnerNorApproved();
 
-contract ERC5643 is ERC721URIStorage, IERC5643, Ownable {
+contract subscriptionNFT is ERC721URIStorage, IERC5643, Ownable {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 

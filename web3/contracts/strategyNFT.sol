@@ -33,4 +33,4 @@ contract strategyNFT is ERC721URIStorage, Ownable {
         require(_exists(tokenId), "Token ID does not exist");
         return tokenURI(tokenId);
     }
-}
+}   

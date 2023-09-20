@@ -1,7 +1,7 @@
 const { ethers } = require('hardhat');
 const axios = require('axios');
 
-const contractAddress = "0x14C23065A83D65F82f89894354fe01fEaa667fB4" //process.env.CONTRACT_ADDRESS
+const contractAddress = "0xC590267a58ad81028b05d9Bc7F8A6c492562A184" //process.env.CONTRACT_ADDRESS
 
 async function getStrategyByTokenId(contractAddress, tokenId) {
     const NFT = await ethers.getContractFactory("strategyNFT")
