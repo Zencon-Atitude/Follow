@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT 
-pragma solidity ^0.8.9;
+pragma solidity ^0.8.13;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
@@ -12,7 +12,7 @@ contract strategyNFT is ERC721URIStorage, Ownable {
     
     constructor() ERC721("FollowTheLead", "FTL") {}
 
-    function mintNFT(address recipient, string memory tokenURI) public onlyOwner returns (uint256)
+    function mintStrategyNFT(address recipient, string memory tokenURI) public onlyOwner returns (uint256)
     {
         _tokenIds.increment();
 
@@ -23,7 +23,13 @@ contract strategyNFT is ERC721URIStorage, Ownable {
         return newItemId;
     }
 
-    function getNFTMetadata(uint256 tokenId) public view returns (string memory) {
+    function transferTo(address recipient, uint256 tokenId) public onlyOwner {
+        require(_exists(tokenId), "Token does not exist");
+        require(ownerOf(tokenId) == owner(), "Caller is not the owner of the token");
+        _transfer(owner(), recipient, tokenId);
+    }
+
+    function getStrategyByTokenId(uint256 tokenId) public view returns (string memory) {
         require(_exists(tokenId), "Token ID does not exist");
         return tokenURI(tokenId);
     }

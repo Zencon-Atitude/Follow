@@ -3,10 +3,10 @@ const axios = require('axios');
 
 const contractAddress = "0x14C23065A83D65F82f89894354fe01fEaa667fB4" //process.env.CONTRACT_ADDRESS
 
-async function getMetadata(contractAddress, tokenId) {
+async function getStrategyByTokenId(contractAddress, tokenId) {
     const NFT = await ethers.getContractFactory("strategyNFT")
 
-    const metadataURL = await NFT.attach(contractAddress).getNFTMetadata(tokenId)
+    const metadataURL = await NFT.attach(contractAddress).getStrategyByTokenId(tokenId)
     const cleanMetadataURL = metadataURL.replace('ipfs://', '')
 
     const gateway = 'https://ipfs.io/ipfs/' + cleanMetadataURL;
@@ -23,7 +23,7 @@ async function getMetadata(contractAddress, tokenId) {
 }
 
 
-getMetadata(contractAddress, '1')
+getStrategyByTokenId(contractAddress, '1')
     .then(() => process.exit(0))
     .catch((error) => {
         console.error(error);

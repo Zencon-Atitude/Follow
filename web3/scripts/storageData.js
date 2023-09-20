@@ -7,18 +7,10 @@ const API_KEY = process.env.NFT_STORAGE_API_KEY
 
 async function storeAsset() {
     const client = new NFTStorage({token: API_KEY})
-    
-    // {
-    //     name: 'strategyNFT',
-    //     description: 'My NFT is very cool',
-    //     image: new File(
-    //         [await fs.promises.readFile('assets/strategy')],
-    //         'strategy.js',
-    //         {type: 'image/js'}
-    
+
     try {
         // Leia o conteúdo do arquivo seu_arquivo.js
-        const javascriptCode = fs.readFileSync('assets/strategy.js', 'utf-8');
+        const javascriptCode = fs.readFileSync('strategy/strategy.js', 'utf-8');
 
         // Crie um Blob com o conteúdo lido do arquivo JavaScript
         const blob = new Blob([javascriptCode], { type: 'application/javascript' });
